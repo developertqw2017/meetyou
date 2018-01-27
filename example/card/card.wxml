@@ -1,11 +1,11 @@
 <view class="we-container {{directionClass}}">
+<view class="text"><text class="text">致朋友</text></view>
   <view class="we-wrapper"
     bindtouchstart="touchstart"
     bindtouchmove="touchmove"
     bindtouchend="touchend"
     animation="{{animationData}}">
-    <view class="we-slide">slide 1</view>
-    <view class="we-slide">slide 2</view>
-    <view class="we-slide">slide 3</view>
+    
+    <view wx:for="{{mail_num}}"  wx:key="unique" data-index="{{index}}" class="we-slide"> <textarea name="nextweek"  style="height:90%"  placeholder="{{mail_num[index]}}" show-confirm-bar="false" readonly="readonly"/></view>
   </view>
 </view>

@@ -3,8 +3,6 @@
   <text>we-swiper</text>
 </view>
 <view class="lists">
-  <navigator class="list-item" url="../general/general" hover-class="navigator-hover">常规</navigator>
-  <navigator class="list-item" url="../card/card" hover-class="navigator-hover">卡片</navigator>
-  <navigator class="list-item" url="../flip/flip" hover-class="navigator-hover">flip</navigator>
-  <navigator class="list-item" url="../example/navigate/navigate?title=navigate" hover-class="navigator-hover">2D翻转</navigator>
+  <navigator class="list-item" url="../card/card" hover-class="navigator-hover"><image src="/img/open.png" style="width:100%;height:70px" />
+  </navigator>
 </view>

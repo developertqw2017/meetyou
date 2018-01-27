@@ -10,11 +10,18 @@ const option = {
   touchend (e) {
     this.weswiper.touchend(e)
   },
+  data:{
+    mail_num : [
+      "fdjaskg",
+      "fjdksajg",
+      "fdsag"
+    ]
+  },
   onLoad () {
     const device = wx.getSystemInfoSync()
     new weSwiper({
       animationViewName: 'animationData',
-      slideLength: 3,
+      slideLength: 21,
       initialSlide: 0,
       width: 550 * device.windowWidth / 750,
       height: 500 * device.windowWidth / 750,

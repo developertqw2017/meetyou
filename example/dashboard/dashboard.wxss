@@ -3,30 +3,16 @@ Page{
 }
 
 .lists{
-  margin: 25rpx 0;
-  border-top: 1rpx solid #d7d7d7;
-  border-bottom: 1rpx solid #d7d7d7;
-  background-color: #fff;
+  margin: 0 0;
 }
 
 .list-item{
   position: relative;
-  width: 100%;
-  height: 100rpx;
-  margin-left: 25rpx;
-  line-height: 100rpx;
-  font-size: 32rpx;
+  width: 20%;
+  margin: 0px 40% 0px 40%;
   border-bottom: 1rpx solid #d7d7d7;
 }
 
-.list-item:after{
-  position: absolute;
-  top: 50%;
-  right: 50rpx;
-  content: '>';
-  transform: translateY(-50%);
-  color: #666;
-}
 
 .list-item:last-child{
   border: 0;

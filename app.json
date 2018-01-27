@@ -2,8 +2,7 @@
   "pages":[
     "example/dashboard/dashboard",
     "example/general/general",
-    "example/card/card",
-    "example/flip/flip"
+    "example/card/card"
   ],
   "window":{
     "backgroundTextStyle":"light",
