@@ -1,5 +1,5 @@
 <view class="we-container {{directionClass}}">
-<view class="text"><text class="text">致朋友</text></view>
+<view class="text"><text class="text">致朋友</text><navigator url="../general/general"><text>text</text></navigator></view>
   <view class="we-wrapper"
     bindtouchstart="touchstart"
     bindtouchmove="touchmove"

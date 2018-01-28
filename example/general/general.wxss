@@ -2,19 +2,72 @@
 
 /*************  个人样式 *************/
 .we-slide{
+
+  width: 90%;
+  height:100%;
+  margin: 10% 5% 10% 5%;
+  padding:10% 5% 0 5%;
+  box-sizing: border-box;
+  color: #000;
+  font-size: 1rem;
+  background-color: #fff;
+  border-radius: 6px
+}
+.text{
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
-  font-size: 2rem;
+  margin:50px;
+  color:red;
+}
+.flex-row {
+    display: flex;
+    flex-direction:row;
 }
 
-.we-slide:nth-child(1){
-  background-color: #4390EE
+.btn-list button {
+    flex:1;    
 }
-.we-slide:nth-child(2){
-  background-color: #CA4040
+
+.audio {
+  text-align:center;
 }
-.we-slide:nth-child(3){
-  background-color: #FF8604
+
+image {
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.page-body-wrapper {
+  justify-content: space-between;
+  flex-grow: 1;
+  margin-bottom: 300rpx;
+}
+.page-body-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.time-big {
+  font-size: 60rpx;
+  margin: 20rpx;
+}
+.time-small {
+  font-size: 30rpx;
+}
+
+.page-body-buttons {
+  margin-top: 60rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.page-body-button {
+  width: 250rpx;
+  text-align: center;
+}
+.button-stop-record {
+  width: 110rpx;
+  height: 110rpx;
+  border: 20rpx solid #fff;
+  background-color: #f55c23;
 }

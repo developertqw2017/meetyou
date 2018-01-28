@@ -4,8 +4,6 @@
     bindtouchmove="touchmove"
     bindtouchend="touchend"
     animation="{{animationData}}">
-    <view class="we-slide">slide 1</view>
-    <view class="we-slide">slide 2</view>
-    <view class="we-slide">slide 3</view>
+    <view class="we-slide"> <textarea name="nextweek"  style="height:70%"  show-confirm-bar="false" readonly="readonly"/><text class="text">开始录音</text></view>
   </view>
 </view>
