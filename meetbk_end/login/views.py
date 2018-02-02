@@ -1,12 +1,12 @@
 from django.shortcuts import render
 from django.http import JsonResponse
-from .model import *
+from .models import *
 from django.core import serializers
 from django.contrib.auth import logout,login,authenticate
 from django.contrib.auth.models import User
 from django.views.decorators.csrf import csrf_exempt
 
-from . cheuser import checkdata
+from .checkuser import checkdata
 import requests
 
 # Create your views here.
@@ -34,7 +34,7 @@ def verify_user(request):
         if errorinfo:
             return JsonResponse(res)
 
-        openid = res['openId']
+        openid = res['openid']
 
         user = authenticate(username=openid,password=openid)
         #登录用户并保存cookie
@@ -44,4 +44,29 @@ def verify_user(request):
             query_user.cookie = res['cookie']
             query_user.save()
 
+            #获取用户发送的信件
+            data['status'] = '已登录'
+        #新建用户
+        else:
+            user_ins = User.object.create_user(
+                username=openid,
+                password=openid
+            )
+            profile = Profile.objects.create(
+                user=user_ins,
+                openid=openid,
+                cookie=res['cookie'],
+                nickname=res['nickName'],
+                gender=res['gender']
+            )
+            new_user = authenticate(username=openid, password=openid)
+            login(request, new_user)
+            data['dirs'] = ['默认']
+            data['status'] = '已创建并登录'
 
+        data['info'] = res
+        #print('最终返回信息', data)
+
+        return JsonResponse(data)
+    data = {'error':'仅接受POST请求'}
+    return JsonResponse(data)

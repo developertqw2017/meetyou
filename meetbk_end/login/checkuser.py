@@ -4,7 +4,7 @@ import string
 import random
 
 #配置文件
-import config
+from . import config
 
 
 def decrypt(*userinfo):

@@ -23,7 +23,7 @@ class Profile(models.Model):
 
 
 class letter(models.Model):
-    owner = models.ForeignKey('Profile',on_delete = models.CASCADE,verbose_name="拥有者",related_name = "User")
+    owner = models.CharField('发送者用户标识',max_length=100, default="default")
     letter = models.CharField('信件内容',max_length=600)
 
     STATUS = (
@@ -32,8 +32,5 @@ class letter(models.Model):
     )
     status = models.CharField('信件状态', max_length=10, choices=STATUS, default = 1)
     send_time = models.DateTimeField('信件发送时间',auto_now_add=True)
-    to_user_id = models.ForeignKey('Profile',on_delete = models.CASCADE, verbose_name="接收者",related_name = "User")
-    record = models.ForeignKey('record', on_delete = models.CASCADE, verbose_name="录音",related_name = "record_url")
-
-class record(models.Model):
+    to_user_id = models.CharField('收信者用户标识',max_length=100, default="default")
     record_url = models.URLField()
