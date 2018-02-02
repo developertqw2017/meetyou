@@ -270,7 +270,7 @@ touchstart (e) {
     - `ease-out`: slide垂直方向滑动
     - `step-start`: slide垂直方向滑动
     - `step-end`: slide垂直方向滑动
-    
+
 设定slide过渡动画速度曲线
 
 
@@ -346,7 +346,7 @@ touchstart (e) {
 - Params:
     - `runCallbacks`:  可选，设为false不触发onSlideChange回调函数
     - `speed`:  可选，切换速度
-    
+
 
 ####  weswiper.slidePrev(runCallbacks, speed)
 
@@ -355,7 +355,7 @@ touchstart (e) {
 - Params:
     - `runCallbacks`:  可选，设为false不触发onSlideChange回调函数
     - `speed`:  可选，切换速度
-    
+
 
 ####  weswiper.slideTo(index, speed, runCallbacks)
 
@@ -365,8 +365,7 @@ touchstart (e) {
     - `index`:  必选，num，指定将要切换到的slide的索引
     - `speed`:  可选，切换速度
     - `runCallbacks`:  可选，设为false不触发onSlideChange回调函数
-    
-    
+
 ## 事件回调
 
 
@@ -416,7 +415,7 @@ touchstart (e) {
 
 
 ####  onSlideMove (weswiper)
-     
+
 回调函数，手指触碰weswiper并拖动slide时执行。
 
 
@@ -442,6 +441,43 @@ touchstart (e) {
 ## TODO
 
 - 增加切换效果：fade，flip等
+
+
+
+##meetyou数据库表结构
+
+cd me
+
+| 字段       | 类型           | 说明     |
+| -------- | ------------ | ------ |
+| id       | 自增长主键        |        |
+| nickname | varchar(100) | 微信昵称   |
+| openid   | varchar(100) | 用户标识   |
+| cookie   | varchar(100) | 用户认证标识 |
+
+
+
+
+
+| 字段          | 类型        | 说明                 |
+| ----------- | --------- | ------------------ |
+| id          | 自增长主键     |                    |
+| user_id     | int       | 信件所属人id（值为0时为推荐信件） |
+| user_letter | text      | 用户所写的信件            |
+| send_time   | timestamp | 发送时间               |
+| to_user_id  | int       | 发送用户id             |
+|             |           |                    |
+|             |           |                    |
+
+表 record
+
+| 字段         | 类型           | 说明     |
+| ---------- | ------------ | ------ |
+| id         | 子增长主键        |        |
+| letter_id  | int          | 录音随信id |
+| record_url | varchar(200) | 录音保存地址 |
+
+
 
 ## 运行环境
 - python3
