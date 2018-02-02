@@ -1,8 +1,10 @@
 from .WXDataCrypt import WXDataCrypt
-import config
 import requests
 import string
 import random
+
+#配置文件
+import config
 
 
 def decrypt(*userinfo):
@@ -14,7 +16,7 @@ def decrypt(*userinfo):
 def checkdata(code, ecrypteddata, iv):
 
     appid = config.APPINFO.appid
-    secret = config.secret
+    secret = config.APPINFO.secret
 
     url = "https:api.weixin.qq.com/sns/jscode2session?appid={0}js_code={2}&grant_type=authorization_code"
     v_url = url.format(appid, secret, code)
