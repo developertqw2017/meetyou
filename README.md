@@ -443,6 +443,18 @@ touchstart (e) {
 
 - 增加切换效果：fade，flip等
 
+## 运行环境
+- python3
+- django2.0.1
+- windows/linux
+
+
+
+## 依赖库
+- django
+- pycryptpdpmex
+- requests
+
 ## License
 The MIT License(http://opensource.org/licenses/MIT)
 
